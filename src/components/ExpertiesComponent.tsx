@@ -223,10 +223,10 @@ const ExpertiesComponent = () => {
                   </div>
                 </div>
 
-                {/* Icon - Positioned below the title */}
-                <div className="transition-all duration-500 lg:group-hover:opacity-0 lg:group-hover:scale-50 lg:group-hover:-translate-x-10">
-                  <div className="text-white drop-shadow-[0_8px_15px_rgba(0,0,0,0.4)] scale-[2.2] origin-left ml-8 mt-12 opacity-95">
-                    <div className="w-8 h-8">
+                {/* Icon - Sitting right under the title at the top */}
+                <div className="transition-all duration-700 lg:group-hover:opacity-0 lg:group-hover:-translate-y-10 mt-10 ml-2">
+                  <div className="text-white drop-shadow-xl scale-[1.8] origin-left opacity-90">
+                    <div className="w-10 h-10">
                       {item.icon}
                     </div>
                   </div>
