@@ -13,12 +13,13 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Hero />
       <MedicareEffecient />
-      <ExpertiesComponent />
       <KPIComponent />
       <EfficiencySlider />
       <ReasonsToChoose />
       <Specialties />
       <Testimonials />
+      <ExpertiesComponent />
+
       <Associations />
 
     </main>

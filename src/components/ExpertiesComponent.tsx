@@ -185,83 +185,112 @@ const ExpertiesComponent = () => {
 
   return (
     <section className="w-full bg-white py-12 px-4 md:px-8">
-      <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-4 h-auto lg:h-[600px]">
-        {expertiseData.map((item) => (
-          <div
-            key={item.id}
-            className="group relative flex-1 lg:hover:flex-[2.5] overflow-hidden rounded-3xl transition-all duration-700 ease-in-out cursor-pointer shadow-lg h-[400px] lg:h-full"
-          >
-            {/* Background Image */}
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-110"
-            />
-
-            {/* Overlay */}
-            <div className={`absolute inset-0 ${item.color} group-hover:bg-black/60 transition-all duration-500`}></div>
-
-            {/* Content Area */}
-            <div className="absolute inset-0 p-8 lg:p-10 flex flex-col z-10 text-white">
-              {/* Top Section (Category, Title & Icon) */}
-              <div className="mb-4">
-                <span className="text-white/80 text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase block mb-6">
-                  {item.category}
-                </span>
-
-                <div className="flex flex-col lg:flex-row items-start mb-4">
-                  <h3 className="text-white text-xl sm:text-xl font-extrabold leading-tight w-full lg:w-[45%] drop-shadow-lg">
+      {/* Mobile & Tablet: horizontal scroll; Desktop: expanding accordion row */}
+      <div className="max-w-[1600px] mx-auto">
+        {/* Mobile / Tablet scroll container */}
+        <div className="flex lg:hidden gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+          {expertiseData.map((item) => (
+            <div
+              key={item.id}
+              className="group relative shrink-0 w-[80vw] sm:w-[55vw] md:w-[40vw] h-[420px] overflow-hidden rounded-3xl cursor-pointer shadow-lg snap-start"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover"
+              />
+              <div className={`absolute inset-0 ${item.color}`}></div>
+              <div className="absolute inset-0 p-7 flex flex-col z-10 text-white">
+                <div>
+                  <span className="text-white/80 text-[10px] font-bold tracking-[0.25em] uppercase block mb-3">
+                    {item.category}
+                  </span>
+                  {/* Fixed minimum height so titles don't cause vertical jumps for the icons below them */}
+                  <h3 className="text-white text-xl font-extrabold leading-tight drop-shadow-lg min-h-[56px] mb-4">
                     {item.title}
                   </h3>
                   
-                  {/* Long Description (Only shown on hover) */}
-                  <div className="hidden lg:block w-full lg:w-[55%] opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 delay-200 pl-4">
-                    <p className="text-white/90 text-sm xl:text-base leading-relaxed">
-                      {item.description}
-                    </p>
+                  {/* Icon perfectly aligned and sized perfectly */}
+                  <div className="mt-2 text-white drop-shadow-xl opacity-90 w-12 h-12 flex items-center justify-center">
+                    {item.icon}
                   </div>
                 </div>
 
-                {/* Icon - Sitting right under the title at the top */}
-                <div className="transition-all duration-700 lg:group-hover:opacity-0 lg:group-hover:-translate-y-10 mt-10 ml-2">
-                  <div className="text-white drop-shadow-xl scale-[1.8] origin-left opacity-90">
-                    <div className="w-10 h-10">
-                      {item.icon}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Middle Section (Statistics - Only shown on hover) */}
-              <div className="absolute bottom-40 left-10 lg:left-12 opacity-0 translate-y-8 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-700 delay-300">
-                <span className="text-6xl sm:text-7xl font-bold block mb-4">
-                  {item.stat}
-                </span>
-                <p className="text-base sm:text-lg text-white/90 leading-tight max-w-2xl">
-                  {item.statDesc}
-                </p>
-              </div>
-
-              {/* Bottom Section (Link & Always visible line) */}
-              <div className="w-full mt-auto">
-                <div className="w-full h-px bg-white/20 mb-8"></div>
-                
-                <div className="flex items-center justify-between">
+                <div className="w-full mt-auto">
+                  <div className="w-full h-px bg-white/20 mb-6"></div>
                   <Link
                     href="#"
-                    className="text-white text-base font-semibold flex items-center gap-2 group/link"
+                    className="text-white text-base font-semibold flex items-center gap-2"
                   >
-                    Learn More
-                    <span className="transition-transform duration-300 group-hover/link:translate-x-2 text-xl">
-                      →
-                    </span>
+                    Learn More <span className="text-xl">→</span>
                   </Link>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Desktop: expanding accordion */}
+        <div className="hidden lg:flex flex-row gap-4 h-[600px]">
+          {expertiseData.map((item) => (
+            <div
+              key={item.id}
+              className="group relative flex-1 hover:flex-[2.5] overflow-hidden rounded-3xl transition-all duration-700 ease-in-out cursor-pointer shadow-lg h-full"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+              <div className={`absolute inset-0 ${item.color} group-hover:bg-black/60 transition-all duration-500`}></div>
+              <div className="absolute inset-0 p-10 flex flex-col z-10 text-white">
+                <div>
+                  <span className="text-white/80 text-xs font-bold tracking-[0.25em] uppercase block mb-4">
+                    {item.category}
+                  </span>
+                  <div className="flex flex-row items-start">
+                    {/* min-h-[60px] guarantees consistent height across different titles (1-line vs 2-line) */}
+                    <h3 className="text-white text-xl lg:text-2xl font-extrabold leading-tight w-[45%] drop-shadow-lg min-h-[64px]">
+                      {item.title}
+                    </h3>
+                    <div className="w-[55%] opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200 pl-4">
+                      <p className="text-white/90 text-sm xl:text-base leading-relaxed hidden lg:block">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Icons are now given a fixed width/height instead of an unpredictable tailwind scale */}
+                  <div className="transition-all duration-700 group-hover:opacity-0 group-hover:-translate-y-6 mt-4">
+                    <div className="text-white drop-shadow-xl opacity-90 w-14 h-14 flex items-center justify-center">
+                      {item.icon}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-40 left-12 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-300">
+                  <span className="text-7xl font-bold block mb-4">{item.stat}</span>
+                  <p className="text-lg text-white/90 leading-tight max-w-2xl">{item.statDesc}</p>
+                </div>
+
+                <div className="w-full mt-auto">
+                  <div className="w-full h-px bg-white/20 mb-8"></div>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href="#"
+                      className="text-white text-base font-semibold flex items-center gap-2 group/link"
+                    >
+                      Learn More
+                      <span className="transition-transform duration-300 group-hover/link:translate-x-2 text-xl">→</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
