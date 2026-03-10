@@ -188,42 +188,40 @@ const ExpertiesComponent = () => {
       {/* Mobile & Tablet: horizontal scroll; Desktop: expanding accordion row */}
       <div className="max-w-[1600px] mx-auto">
         {/* Mobile / Tablet scroll container */}
-        <div className="flex lg:hidden gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex lg:hidden gap-5 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide w-full">
           {expertiseData.map((item) => (
             <div
               key={item.id}
-              className="group relative shrink-0 w-[80vw] sm:w-[55vw] md:w-[40vw] h-[420px] overflow-hidden rounded-3xl cursor-pointer shadow-lg snap-start"
+              className="group relative shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] h-[450px] overflow-hidden rounded-3xl cursor-pointer shadow-lg snap-start"
             >
               <Image
                 src={item.image}
                 alt={item.title}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className={`absolute inset-0 ${item.color}`}></div>
-              <div className="absolute inset-0 p-7 flex flex-col z-10 text-white">
+              <div className={`absolute inset-0 ${item.color} group-hover:bg-black/40 transition-colors duration-500`}></div>
+              <div className="absolute inset-0 p-8 flex flex-col z-10 text-white">
                 <div>
-                  <span className="text-white/80 text-[10px] font-bold tracking-[0.25em] uppercase block mb-3">
+                  <span className="text-white/90 text-[11px] font-bold tracking-[0.2em] uppercase block mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
                     {item.category}
                   </span>
-                  {/* Fixed minimum height so titles don't cause vertical jumps for the icons below them */}
-                  <h3 className="text-white text-xl font-extrabold leading-tight drop-shadow-lg min-h-[56px] mb-4">
+                  <h3 className="text-white text-2xl font-extrabold leading-tight drop-shadow-md">
                     {item.title}
                   </h3>
-                  
-                  {/* Icon perfectly aligned and sized perfectly */}
-                  <div className="mt-2 text-white drop-shadow-xl opacity-90 w-12 h-12 flex items-center justify-center">
-                    {item.icon}
-                  </div>
                 </div>
 
                 <div className="w-full mt-auto">
-                  <div className="w-full h-px bg-white/20 mb-6"></div>
+                  <div className="text-white drop-shadow-lg opacity-100 w-12 h-12 flex items-center justify-start mb-6">
+                    {item.icon}
+                  </div>
+                  <div className="w-full h-px bg-white/30 mb-5"></div>
                   <Link
                     href="#"
-                    className="text-white text-base font-semibold flex items-center gap-2"
+                    className="text-white text-base font-semibold flex items-center gap-2 group/link hover:text-white/90 transition-colors"
                   >
-                    Learn More <span className="text-xl">→</span>
+                    Learn More 
+                    <span className="transition-transform duration-300 group-hover/link:translate-x-2 text-xl">→</span>
                   </Link>
                 </div>
               </div>
@@ -232,7 +230,7 @@ const ExpertiesComponent = () => {
         </div>
 
         {/* Desktop: expanding accordion */}
-        <div className="hidden lg:flex flex-row gap-4 h-[600px]">
+        <div className="hidden lg:flex flex-row gap-4 h-[600px] w-full">
           {expertiseData.map((item) => (
             <div
               key={item.id}
@@ -242,48 +240,50 @@ const ExpertiesComponent = () => {
                 src={item.image}
                 alt={item.title}
                 fill
-                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className={`absolute inset-0 ${item.color} group-hover:bg-black/60 transition-all duration-500`}></div>
+              
               <div className="absolute inset-0 p-10 flex flex-col z-10 text-white">
-                <div>
-                  <span className="text-white/80 text-xs font-bold tracking-[0.25em] uppercase block mb-4">
+                {/* Top Section */}
+                <div className="w-full">
+                  <span className="text-white/90 text-xs font-bold tracking-[0.2em] uppercase block mb-4 whitespace-nowrap overflow-hidden text-ellipsis shadow-sm">
                     {item.category}
                   </span>
-                  <div className="flex flex-row items-start">
-                    {/* min-h-[60px] guarantees consistent height across different titles (1-line vs 2-line) */}
-                    <h3 className="text-white text-xl lg:text-2xl font-extrabold leading-tight w-[45%] drop-shadow-lg min-h-[64px]">
+                  <div className="flex flex-row items-start w-full">
+                    <h3 className="text-white text-3xl font-extrabold leading-tight w-full group-hover:w-[45%] transition-all duration-700 ease-in-out drop-shadow-lg pr-2">
                       {item.title}
                     </h3>
-                    <div className="w-[55%] opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200 pl-4">
-                      <p className="text-white/90 text-sm xl:text-base leading-relaxed hidden lg:block">
+                    <div className="w-0 group-hover:w-[55%] opacity-0 group-hover:opacity-100 h-0 group-hover:h-auto transition-all duration-700 ease-in-out lg:pl-6 overflow-hidden delay-100">
+                      <p className="text-white/95 text-base leading-relaxed hidden lg:block min-w-[320px]">
                         {item.description}
                       </p>
                     </div>
                   </div>
-                  
-                  {/* Icons are now given a fixed width/height instead of an unpredictable tailwind scale */}
-                  <div className="transition-all duration-700 group-hover:opacity-0 group-hover:-translate-y-6 mt-4">
-                    <div className="text-white drop-shadow-xl opacity-90 w-14 h-14 flex items-center justify-center">
+                </div>
+
+                {/* Hover States: Stats absolute positioned */}
+                <div className="absolute bottom-40 left-10 w-[80%] opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-300 pointer-events-none">
+                  <span className="text-6xl font-black block mb-2 drop-shadow-md">{item.stat}</span>
+                  <p className="text-lg text-white/95 font-medium leading-tight max-w-sm drop-shadow-sm">{item.statDesc}</p>
+                </div>
+
+                {/* Bottom Section: Icon & Link */}
+                <div className="w-full mt-auto relative z-20">
+                  <div className="transition-all duration-700 group-hover:opacity-0 group-hover:-translate-y-6 mb-8 transform group-hover:scale-95 origin-left">
+                    <div className="text-white drop-shadow-xl opacity-100 w-14 h-14 flex items-center justify-start">
                       {item.icon}
                     </div>
                   </div>
-                </div>
 
-                <div className="absolute bottom-40 left-12 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-300">
-                  <span className="text-7xl font-bold block mb-4">{item.stat}</span>
-                  <p className="text-lg text-white/90 leading-tight max-w-2xl">{item.statDesc}</p>
-                </div>
-
-                <div className="w-full mt-auto">
-                  <div className="w-full h-px bg-white/20 mb-8"></div>
+                  <div className="w-full h-[1.5px] bg-white/30 mb-6 group-hover:mb-8 transition-all duration-500"></div>
                   <div className="flex items-center justify-between">
                     <Link
                       href="#"
-                      className="text-white text-base font-semibold flex items-center gap-2 group/link"
+                      className="text-white text-lg font-bold flex items-center gap-2 group/link"
                     >
                       Learn More
-                      <span className="transition-transform duration-300 group-hover/link:translate-x-2 text-xl">→</span>
+                      <span className="transition-transform duration-300 group-hover/link:translate-x-2 text-2xl font-normal">→</span>
                     </Link>
                   </div>
                 </div>
