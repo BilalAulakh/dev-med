@@ -21,6 +21,30 @@ const ContactSection = () => {
           <p className="text-gray-600 text-xl lg:text-2xl leading-relaxed font-medium max-w-sm">
             Fill out this form, tell us about your practice's unique needs, and get a tailored solution!
           </p>
+
+          {/* Contact Details */}
+          <div className="flex flex-col space-y-4 mt-2">
+            {/* Email */}
+            <a href="mailto:devmedcare@gmail.com" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-full bg-[#00a3ff]/10 flex items-center justify-center group-hover:bg-[#00a3ff]/20 transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#00a3ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <polyline points="22,6 12,13 2,6" stroke="#00a3ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-gray-700 font-medium text-base group-hover:text-[#00a3ff] transition-colors">devmedcare@gmail.com</span>
+            </a>
+
+            {/* Phone */}
+            <a href="tel:+923203000555" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-full bg-[#8cc63f]/10 flex items-center justify-center group-hover:bg-[#8cc63f]/20 transition-colors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-gray-700 font-medium text-base group-hover:text-[#8cc63f] transition-colors">+92 320 3000555</span>
+            </a>
+          </div>
         </div>
 
         {/* Right Side: Form */}
