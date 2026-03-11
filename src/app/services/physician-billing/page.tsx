@@ -44,15 +44,15 @@ const PhysicianBillingPage = () => {
 
           <div className="flex flex-wrap justify-center gap-12 md:gap-24 mb-16">
              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-[#111] mb-2">17<span className="text-[#8cc63f]">+</span> <span className="text-lg md:text-xl text-[#005c93] font-bold uppercase tracking-wider block mt-1">YEARS</span></div>
+                <div className="text-4xl md:text-5xl font-black text-[#111] mb-2">3<span className="text-[#8cc63f]">+</span> <span className="text-lg md:text-xl text-[#005c93] font-bold uppercase tracking-wider block mt-1">YEARS</span></div>
                 <p className="text-xs text-gray-400 font-semibold uppercase">Experience</p>
              </div>
              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-[#111] mb-2">850 <span className="text-lg md:text-xl text-[#005c93] font-bold uppercase tracking-wider block mt-1">MILLION DOLLARS</span></div>
+                <div className="text-4xl md:text-5xl font-black text-[#111] mb-2">200 <span className="text-lg md:text-xl text-[#005c93] font-bold uppercase tracking-wider block mt-1">Thousands DOLLARS</span></div>
                 <p className="text-xs text-gray-400 font-semibold uppercase">Revenue Collected</p>
              </div>
              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-black text-[#111] mb-2">50<span className="text-[#8cc63f]">+</span> <span className="text-lg md:text-xl text-[#005c93] font-bold uppercase tracking-wider block mt-1">SPECIALTIES</span></div>
+                <div className="text-4xl md:text-5xl font-black text-[#111] mb-2">20<span className="text-[#8cc63f]">+</span> <span className="text-lg md:text-xl text-[#005c93] font-bold uppercase tracking-wider block mt-1">SPECIALTIES</span></div>
                 <p className="text-xs text-gray-400 font-semibold uppercase">Expertise Across</p>
              </div>
              <div className="text-center">

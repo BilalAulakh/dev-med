@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import logoNav from "../assets/logo-nav.png";
 
 const servicesData = [
   {
@@ -128,12 +128,21 @@ const Navbar = () => {
           <div className="shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src={logo}
-                alt="MedCareMSO Logo"
-                width={200}
-                height={60}
-                className="h-12 w-auto"
+                src={logoNav}
+                alt="DevMedCare Logo"
+                width={50}
+                height={50}
+                className="h-10 md:h-10 w-auto"
               />
+              <div className="flex flex-col justify-center gap-0">
+                <div className="text-[1.3rem] md:text-3xl font-bold leading-none tracking-tight flex items-baseline">
+                  <span className="text-[#005c93]">DevMedCare</span>
+                  <span className="text-gray-500 font-light ml-1 text-lg md:text-2xl">MSO</span>
+                </div>
+                <div className="text-[0.65rem] md:text-sm text-gray-500 tracking-wide -mt-0.5 md:-mt-1.5">
+                  your growth, our promise
+                </div>
+              </div>
             </Link>
           </div>
 

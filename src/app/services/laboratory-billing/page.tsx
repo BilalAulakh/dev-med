@@ -55,9 +55,9 @@ const LaboratoryBillingPage = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                {[
                  { value: "98%", label: "First-Pass Rate", icon: <polyline points="20 6 9 17 4 12" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/> },
-                 { value: "30+", label: "Years Experience", icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/> },
-                 { value: "850M+", label: "Revenue Collected", icon: <><line x1="12" y1="1" x2="12" y2="23" stroke="#111" strokeWidth="2"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#111" strokeWidth="2" fill="none"/></> },
-                 { value: "50+", label: "Specialties Covered", icon: <><circle cx="12" cy="12" r="10" stroke="#111" strokeWidth="2" fill="none"/><path d="M12 16v-4M12 8h.01" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></> }
+                 { value: "3+", label: "Years Experience", icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/> },
+                 { value: "200k", label: "Revenue Collected", icon: <><line x1="12" y1="1" x2="12" y2="23" stroke="#111" strokeWidth="2"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#111" strokeWidth="2" fill="none"/></> },
+                 { value: "20+", label: "Specialties Covered", icon: <><circle cx="12" cy="12" r="10" stroke="#111" strokeWidth="2" fill="none"/><path d="M12 16v-4M12 8h.01" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></> }
                ].map((item, i) => (
                  <div key={i} className="flex flex-col items-center p-6 bg-white rounded-2xl shadow-sm border border-gray-50">
                     <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-4">

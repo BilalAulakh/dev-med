@@ -71,7 +71,7 @@ const ARRecoveryPage = () => {
                    )
                  },
                  { 
-                   value: "$60,000 to $164,000", 
+                   value: "$10000 to $10,000", 
                    label: "Monthly Collection Rose",
                    icon: (
                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -80,16 +80,7 @@ const ARRecoveryPage = () => {
                      </svg>
                    )
                  },
-                 { 
-                   value: "37.4%", 
-                   label: "Decrease In Receivables By",
-                   icon: (
-                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                        <polyline points="16 7 22 7 22 13"></polyline>
-                     </svg>
-                   )
-                 }
+            
                ].map((item, i) => (
                  <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-start hover:shadow-md transition-shadow">
                     <div className="mb-6 p-3 bg-gray-50 rounded-lg">{item.icon}</div>

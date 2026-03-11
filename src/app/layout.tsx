@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MedCare MSO - Top Rated Medical Billing Company",
+  title: "DevMedCare MSO - Top Rated Medical Billing Company",
   description: "Experience the next level of Medical Billing and RCM services.",
 };
 
