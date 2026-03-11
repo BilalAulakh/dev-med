@@ -148,29 +148,19 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4 h-full">
-            <div className="relative group">
-              <button className="flex items-center text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors cursor-pointer">
-                <span className="mr-1 text-[#FDB813]">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l1.5 7.5L21 11l-7.5 1.5L12 20l-1.5-7.5L3 11l7.5-1.5z" />
-                  </svg>
-                </span>
-                AI-Products
-                <svg
-                  className="ml-1 h-4 w-4 text-[#005c93]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
+            <Link
+              href="/"
+              className="text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors"
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/about"
+              className="text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors"
+            >
+              About
+            </Link>
 
             <div className="relative group h-full flex items-center">
               <button className="flex items-center text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors cursor-pointer h-full">
@@ -232,32 +222,6 @@ const Navbar = () => {
             </div>
 
             <Link
-              href="/specialties"
-              className="text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors"
-            >
-              Specialties
-            </Link>
-
-            <div className="relative group">
-              <button className="flex items-center text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors cursor-pointer">
-                Resources
-                <svg
-                  className="ml-1 h-4 w-4 text-[#005c93]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <Link
               href="/contact"
               className="text-[#005c93] hover:text-[#0079C1] font-semibold transition-colors"
             >
@@ -313,11 +277,18 @@ const Navbar = () => {
       <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-white border-b overflow-y-auto max-h-[calc(100vh-80px)]`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <Link
-            href="/ai-products"
+            href="/"
             onClick={() => setIsOpen(false)}
             className="block px-3 py-2 text-base font-semibold text-[#005c93] hover:text-[#0079C1] hover:bg-gray-50 rounded-md"
           >
-            AI-Products
+            Home
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 text-base font-semibold text-[#005c93] hover:text-[#0079C1] hover:bg-gray-50 rounded-md"
+          >
+            About
           </Link>
 
           {/* Services Mobile Dropdown */}
@@ -360,20 +331,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link
-            href="/specialties"
-            onClick={() => setIsOpen(false)}
-            className="block px-3 py-2 text-base font-semibold text-[#005c93] hover:text-[#0079C1] hover:bg-gray-50 rounded-md"
-          >
-            Specialties
-          </Link>
-          <Link
-            href="/resources"
-            onClick={() => setIsOpen(false)}
-            className="block px-3 py-2 text-base font-semibold text-[#005c93] hover:text-[#0079C1] hover:bg-gray-50 rounded-md"
-          >
-            Resources
-          </Link>
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}

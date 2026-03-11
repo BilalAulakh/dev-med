@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
             <div className="text-white">
               <p className="text-xs uppercase font-bold tracking-widest opacity-80">Call Us At</p>
-              <p className="text-2xl lg:text-3xl font-extrabold tracking-tight">800-640-6409</p>
+              <p className="text-2xl lg:text-3xl font-extrabold tracking-tight">0320-3000555</p>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ const MedicalBillingPage = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="p-8 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-5xl font-extrabold text-[#0080FF] mb-2 group-hover:scale-110 transition-transform">5000+</span>
+              <span className="text-5xl font-extrabold text-[#0080FF] mb-2 group-hover:scale-110 transition-transform">500+</span>
               <span className="text-gray-500 font-semibold uppercase tracking-wider text-sm">Providers</span>
             </div>
             <div className="p-8 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300">
@@ -50,7 +50,7 @@ const MedicalBillingPage = () => {
               <span className="text-gray-500 font-semibold uppercase tracking-wider text-sm">Specialties</span>
             </div>
             <div className="p-8 rounded-2xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-center group hover:-translate-y-2 transition-transform duration-300">
-              <span className="text-5xl font-extrabold text-[#005c93] mb-2 group-hover:scale-110 transition-transform">$2B+</span>
+              <span className="text-5xl font-extrabold text-[#005c93] mb-2 group-hover:scale-110 transition-transform">$20k+</span>
               <span className="text-gray-500 font-semibold uppercase tracking-wider text-sm">Processed</span>
             </div>
           </div>
