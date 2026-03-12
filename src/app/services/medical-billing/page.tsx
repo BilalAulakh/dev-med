@@ -375,9 +375,9 @@ const MedicalBillingPage = () => {
             <p className="text-gray-500 text-sm mb-6">
               To explore the spectrum of our specialties, including tailored billing services for various medical niches, please click the button below.
             </p>
-            <button className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-full text-sm font-semibold transition-colors shadow-md">
+            {/* <button className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-full text-sm font-semibold transition-colors shadow-md">
               View All Specialties
-            </button>
+            </button> */}
           </div>
         </div>
       </section>

@@ -98,9 +98,9 @@ const Footer = () => {
                   <Link href="#" className="text-gray-500 hover:text-[#004a99] text-sm transition-colors">{specialty}</Link>
                 </li>
               ))}
-              <li className="pt-2">
+              {/* <li className="pt-2">
                 <Link href="#" className="text-[#00a3ff] hover:underline text-sm font-bold">View all specialties</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -123,9 +123,7 @@ const Footer = () => {
                   <Link href="#" className="text-gray-500 hover:text-[#004a99] text-sm transition-colors">{link}</Link>
                 </li>
               ))}
-              <li className="pt-2">
-                <Link href="#" className="text-[#00a3ff] hover:underline text-sm font-bold">Contact us</Link>
-              </li>
+             
             </ul>
           </div>
 

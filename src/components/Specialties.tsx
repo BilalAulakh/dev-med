@@ -84,11 +84,11 @@ const Specialties = () => {
           ))}
         </div>
 
-        <div className="flex justify-center mt-32">
+        {/* <div className="flex justify-center mt-32">
           <button className="bg-[#8cc63f] hover:bg-[#7ab336] text-white px-10 py-3 rounded-full text-sm font-extrabold uppercase tracking-wider transition-all duration-300 shadow-md transform hover:scale-105">
             View All Specialties
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

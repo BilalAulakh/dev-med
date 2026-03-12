@@ -82,9 +82,7 @@ const LaboratoryBillingPage = () => {
                <button className="bg-[#111] hover:bg-gray-800 text-white px-8 py-3 rounded-full font-bold shadow-md transition-all text-xs uppercase tracking-wider">
                   Learn More
                </button>
-               <button className="bg-white border border-gray-300 hover:bg-gray-50 text-[#333] px-8 py-3 rounded-full font-bold shadow-sm transition-all text-xs uppercase tracking-wider">
-                  Contact Us
-               </button>
+           
             </div>
          </div>
       </section>
